@@ -25,5 +25,8 @@ WORKDIR /opt/Python-3.8.3
 RUN ./configure --enable-optimizations && \
     make install
 
+RUN wget https://bootstrap.pypa.io/get-pip.py && \
+    python get-pip.py
+
 RUN pip install pyinstaller
 
