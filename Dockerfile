@@ -12,7 +12,8 @@ RUN yum install -y tk tk-devel && \
     yum install -y libuuid libuuid-devel && \
     yum install -y uuid
 
-RUN yum install -y make
+RUN yum install -y make && \
+    yum clean all
 
 WORKDIR /opt
 
@@ -22,5 +23,7 @@ RUN wget https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz && \
 WORKDIR /opt/Python-3.8.3
 
 RUN ./configure --enable-optimizations && \
-    make install && \
-    yum clean all
+    make install
+
+RUN pip install pyinstaller
+
