@@ -1,16 +1,16 @@
 FROM oraclelinux:7.8
 
-RUN yum install wget && \
-    yum install gcc readline readline-devel && \
-    yum install zlib zlib-devel && \
-    yum install libffi-devel openssl-devel
+RUN yum install -y wget && \
+    yum install -y gcc readline readline-devel && \
+    yum install -y zlib zlib-devel && \
+    yum install -y libffi-devel openssl-devel
 
-RUN yum install tk tk-devel && \
-    yum install sqlite sqlite-devel && \
-    yum install bzip2 bzip2-devel && \
-    yum install xz xz-devel && \
-    yum install libuuid libuuid-devel && \
-    yum install uuid
+RUN yum install -y tk tk-devel && \
+    yum install -y sqlite sqlite-devel && \
+    yum install -y bzip2 bzip2-devel && \
+    yum install -y xz xz-devel && \
+    yum install -y libuuid libuuid-devel && \
+    yum install -y uuid
 
 WORKDIR /opt
 
