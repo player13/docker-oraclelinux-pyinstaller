@@ -1,4 +1,4 @@
-from oraclelinux:7.8
+FROM oraclelinux:7.8
 
 RUN yum install wget && \
     yum install gcc readline readline-devel && \
