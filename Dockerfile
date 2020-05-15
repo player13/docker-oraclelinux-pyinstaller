@@ -12,6 +12,8 @@ RUN yum install -y tk tk-devel && \
     yum install -y libuuid libuuid-devel && \
     yum install -y uuid
 
+RUN yum install -y make
+
 WORKDIR /opt
 
 RUN wget https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz && \
