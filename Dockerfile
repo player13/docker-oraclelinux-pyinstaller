@@ -22,7 +22,7 @@ RUN wget https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz && \
 
 WORKDIR /opt/Python-3.8.3
 
-RUN ./configure --enable-optimizations && \
+RUN ./configure --enable-optimizations --enable-shared && \
     make install
 
 RUN python3 -m pip install pyinstaller
