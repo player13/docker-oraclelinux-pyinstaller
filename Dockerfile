@@ -7,6 +7,7 @@ RUN yum install -y wget && \
 
 RUN yum install -y tk tk-devel && \
     yum install -y sqlite sqlite-devel && \
+    yum install -y postgresql-libs postgresql-devel && \
     yum install -y bzip2 bzip2-devel && \
     yum install -y xz xz-devel && \
     yum install -y libuuid libuuid-devel && \
