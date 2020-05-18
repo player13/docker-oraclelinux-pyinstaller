@@ -23,8 +23,10 @@ RUN wget https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz && \
 WORKDIR /opt/Python-3.8.3
 
 RUN ./configure --enable-optimizations --enable-shared && \
-    make install && \
-    export LD_LIBRARY_PATH=/usr/local/lib
+    make install
+    
+RUN echo "/usr/local/lib" > /etc/ld.so.conf.d/python36-x86_64.conf && \
+    ldconfig -v
 
 RUN pip3 install pyinstaller
 
