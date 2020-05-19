@@ -14,6 +14,7 @@ RUN yum install -y tk tk-devel && \
     yum install -y uuid
 
 RUN yum install -y make && \
+    yum install -y rpm-build rpm-devel rpmdevtools && \
     yum clean all
 
 WORKDIR /opt
